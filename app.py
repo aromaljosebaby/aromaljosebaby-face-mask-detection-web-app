@@ -1,10 +1,10 @@
 import streamlit as st
-#from PIL import Image
+'''#from PIL import Image
 import cv2
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
 import numpy as np
 import tensorflow as tf
-import classify
+import classify'''
 
 def main():
 
@@ -22,7 +22,7 @@ def main():
 
 
 
-    st.title(" ")
+    '''st.title(" ")
     st.title(" ")
 
     variable=0
@@ -88,7 +88,7 @@ def main():
         cv2.destroyAllWindows()
 
     st.title(" ")
-    st.subheader('Press Escape key to close Video')
+    st.subheader('Press Escape key to close Video')'''
 
 
 if __name__=='__main__':
