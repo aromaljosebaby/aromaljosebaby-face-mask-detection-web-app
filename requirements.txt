@@ -1,13 +1,8 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: win-64
-
 
 
 
 
 tensorflow==2.1.0
-numpy==1.19.2
 opencv-python==4.4.0.46
 streamlit==0.73.1
 
