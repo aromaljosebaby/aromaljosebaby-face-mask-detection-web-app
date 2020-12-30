@@ -9,7 +9,6 @@
 tensorflow==2.1.0
 numpy==1.19.2
 opencv-python==4.4.0.46
-pillow==8.0.1
 streamlit==0.73.1
 
 
