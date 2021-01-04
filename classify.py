@@ -12,9 +12,10 @@ def get_model():
     model = tf.saved_model.load('saved_model/face_mask_model_with_no_data_aug_on_resnet')
     return model
 
+loaded_model=get_model()
 
 def predict(image):
-    loaded_model = get_model()
+    #loaded_model = get_model()
 
     prediction_dictionary = {0: 'with_mask', 1: 'without_mask'}
     colour_dict = {0: (0, 255, 0), 1: (0, 0, 255)}
@@ -25,6 +26,7 @@ def predict(image):
     final_prediction = prediction_dictionary[np.argmax(ans)]
 
     return label,final_prediction
+
 
 
 
