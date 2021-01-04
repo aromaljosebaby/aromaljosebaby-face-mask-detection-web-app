@@ -1,12 +1,12 @@
 import streamlit as st
-#from PIL import Image
+
 import cv2
 #from tensorflow.keras.preprocessing.image import img_to_array, load_img
 import numpy as np
 #import tensorflow as tf
 #import classify
 
-'''def main():
+def main():
 
     html_temp = """
         <div style="background-color:#e63946 ;padding:10px">
@@ -28,11 +28,11 @@ import numpy as np
     variable=0
 
 
-    def load_haarcascade(variable):
+    def load_haarcascade():
         haarcascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         return haarcascade
 
-    haarcascade=load_haarcascade(variable)
+    haarcascade=load_haarcascade()
 
 
 
@@ -61,7 +61,7 @@ import numpy as np
 
                 img = cv2.resize(im, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
 
-                img = img_to_array(img)
+                #img = img_to_array(img)
 
                 img = img / 255.0
 
@@ -91,5 +91,5 @@ import numpy as np
     st.subheader('Press Escape key to close Video')
 
 
-if __name__=='__main__':'''
+if __name__=='__main__':
     main()
