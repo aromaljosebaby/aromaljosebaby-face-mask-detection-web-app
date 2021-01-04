@@ -6,7 +6,7 @@ import numpy as np
 #import tensorflow as tf
 #import classify
 
-def main():
+'''def main():
 
     html_temp = """
         <div style="background-color:#e63946 ;padding:10px">
@@ -91,5 +91,5 @@ def main():
     st.subheader('Press Escape key to close Video')
 
 
-if __name__=='__main__':
+if __name__=='__main__':'''
     main()
