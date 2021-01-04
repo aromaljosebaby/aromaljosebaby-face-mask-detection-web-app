@@ -1,10 +1,10 @@
 import streamlit as st
-'''#from PIL import Image
+#from PIL import Image
 import cv2
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
+#from tensorflow.keras.preprocessing.image import img_to_array, load_img
 import numpy as np
-import tensorflow as tf
-import classify'''
+#import tensorflow as tf
+#import classify
 
 def main():
 
@@ -22,7 +22,7 @@ def main():
 
 
 
-    '''st.title(" ")
+    st.title(" ")
     st.title(" ")
 
     variable=0
@@ -67,15 +67,15 @@ def main():
 
                 lol = np.array([img])
 
-                label,final_prediction=classify.predict(lol)
+                #label,final_prediction=classify.predict(lol)
 
                 #ans = loaded_model(lol, training=False)
 
 
 
-                cv2.rectangle(im, (x, y), (x + w, y + h), colour_dict[label], 2)
-                cv2.rectangle(im, (x, y - 40), (x + w, y), colour_dict[label], -1)
-                cv2.putText(im, final_prediction, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
+                #cv2.rectangle(im, (x, y), (x + w, y + h), colour_dict[label], 2)
+                #cv2.rectangle(im, (x, y - 40), (x + w, y), colour_dict[label], -1)
+                #cv2.putText(im, final_prediction, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
 
             cv2.imshow('LIVE', im)
             key = cv2.waitKey(10)
@@ -88,7 +88,7 @@ def main():
         cv2.destroyAllWindows()
 
     st.title(" ")
-    st.subheader('Press Escape key to close Video')'''
+    st.subheader('Press Escape key to close Video')
 
 
 if __name__=='__main__':
