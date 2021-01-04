@@ -28,11 +28,11 @@ def main():
     variable=0
 
 
-    def load_haarcascade():
+    '''def load_haarcascade():
         haarcascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         return haarcascade
 
-    haarcascade=load_haarcascade()
+    haarcascade=load_haarcascade()'''
 
 
 
@@ -43,49 +43,49 @@ def main():
 
     button=st.button('Start Video')
 
-    if button:
+    #if button:
 
-        cap = cv2.VideoCapture(0)
-        while True:
-            (rval, im) = cap.read()
-            im = cv2.flip(im, 1, 1)
-
-
-
-            rerect_size = cv2.resize(im, (im.shape[1] // rect_size, im.shape[0] // rect_size))
-            faces = haarcascade.detectMultiScale(rerect_size)
-            for f in faces:
-                (x, y, w, h) = [v * rect_size for v in f]
-
-                face_img = im[y: y + h, x: x + w]
-
-                img = cv2.resize(im, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
-
-                #img = img_to_array(img)
-
-                img = img / 255.0
-
-                lol = np.array([img])
-
-                #label,final_prediction=classify.predict(lol)
-
-                #ans = loaded_model(lol, training=False)
+    cap = cv2.VideoCapture(0)
+    while True:
+        (rval, im) = cap.read()
+        im = cv2.flip(im, 1, 1)
 
 
 
-                #cv2.rectangle(im, (x, y), (x + w, y + h), colour_dict[label], 2)
-                #cv2.rectangle(im, (x, y - 40), (x + w, y), colour_dict[label], -1)
-                #cv2.putText(im, final_prediction, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
+        rerect_size = cv2.resize(im, (im.shape[1] // rect_size, im.shape[0] // rect_size))
+        #faces = haarcascade.detectMultiScale(rerect_size)
+        '''for f in faces:
+            (x, y, w, h) = [v * rect_size for v in f]
 
-            cv2.imshow('LIVE', im)
-            key = cv2.waitKey(10)
+            face_img = im[y: y + h, x: x + w]
 
-            if key == 27:
-                break
+            img = cv2.resize(im, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
 
-        cap.release()
+            #img = img_to_array(img)
 
-        cv2.destroyAllWindows()
+            img = img / 255.0
+
+            lol = np.array([img])
+
+            #label,final_prediction=classify.predict(lol)
+
+            #ans = loaded_model(lol, training=False)
+
+
+
+            #cv2.rectangle(im, (x, y), (x + w, y + h), colour_dict[label], 2)
+            #cv2.rectangle(im, (x, y - 40), (x + w, y), colour_dict[label], -1)
+            #cv2.putText(im, final_prediction, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)'''
+
+        cv2.imshow('LIVE', im)
+        key = cv2.waitKey(10)
+
+        if key == 27:
+            break
+
+    cap.release()
+
+    cv2.destroyAllWindows()
 
     st.title(" ")
     st.subheader('Press Escape key to close Video')
